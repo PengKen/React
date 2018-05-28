@@ -163,7 +163,7 @@ class UserManage extends Component{
             dialogForm1: [
                 {
                     label:'登录名',
-                    param:'loginName'
+                    param:'userName'
                 },
                 {
                     label:'用户名',
@@ -173,8 +173,8 @@ class UserManage extends Component{
                     param:'duties',
                     type:'Select',
                     options:[{
-                        value:"普通用户",
-                        label:"普通用户"
+                        id:"普通用户",
+                        name:"普通用户"
                     },{
                         value:"黑名单用户",
                         label:"黑名单用户"
