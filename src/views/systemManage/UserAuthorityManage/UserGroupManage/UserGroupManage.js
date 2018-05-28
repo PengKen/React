@@ -39,26 +39,25 @@ class UserGroupManage extends Component{
     }
 
     handleClickForDelete(e,row){
-       /*this.$post('/usergroup/del',row.id)
+       this.$post('/group/del',{id:row.id})
            .then(res=>{
                if(res == 1){
-                   getList()
+                   this.getList()
                }
            }).catch(e=>{
            console.log(e)
-       })*/
+       })
    }
 
     handleClickForAdd(){
-        console.log(this.state.addedUserGroup)
-        /*this.$post('/usergroup/add',this.state.addedUserGroup)
+        this.$post('/group/add',{name:this.state.addedUserGroup})
             .then(res=>{
                 if(res == 1){
-                    getList()
+                    this.getList()
                 }
             }).catch(e=>{
             console.log(e)
-        })*/
+        })
     }
 
     handleComfirm(){
@@ -96,7 +95,7 @@ class UserGroupManage extends Component{
                 },
                 {
                     label: "用户组名称",
-                    prop: "userGroupName",
+                    prop: "name",
                 },
                 {
                     label: "操作",

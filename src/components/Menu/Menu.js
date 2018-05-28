@@ -34,10 +34,10 @@ class Menus extends Component{
                                   <Link to='/dataManage/economicIndicatorsSetting/IndProviderManage'><Menu.Item index="5-4">指标提供者管理</Menu.Item></Link>
                               </Menu.SubMenu>
                                 <Menu.SubMenu index='6' title={<p>指标数据管理</p>}>
-                                  <Link to='/dataManage/indexDataManage/MonthlyDataManage/MonthlyDataQuery'>
-                                    <Menu.SubMenu  index="7" title={<p className="el-submenu__titles">月度数据管理</p>}>
-                                      <Link to='/dataManage/indexDataManage/MonthlyDataManage/MonthlyDataQuery'><Menu.Item index="7-1">月度数据查询</Menu.Item></Link>
-                                      <Link to= '/dataManage/indexDataManage/MonthlyDataManage/MonthlyDataImport'><Menu.Item index="7-2">月度数据导入</Menu.Item></Link>
+                                    <Link to='/dataManage/indexDataManage/MonthlyDataManage'>
+                                    <Menu.SubMenu index="7" title={<p className="el-submenu__titles">月度数据管理</p>}>
+                                        <Link to='/dataManage/indexDataManage/MonthlyDataManage/MonthlyDataQuery'><Menu.Item index="7-1">月度数据查询</Menu.Item></Link>
+                                        <Link to= '/dataManage/indexDataManage/MonthlyDataManage/MonthlyDataImport'><Menu.Item index="7-2">月度数据导入</Menu.Item></Link>
                                     </Menu.SubMenu>
                                   </Link>
 
@@ -49,14 +49,12 @@ class Menus extends Component{
                                         <Link to='/dataManage/indexDataManage/MonthlyDataManage/AnnualDataQuery'><Menu.Item index="9-1">年度数据查询</Menu.Item></Link>
                                         <Link to= '/dataManage/indexDataManage/MonthlyDataManage/AnnualDataImport'><Menu.Item index="9-2">年度数据导入</Menu.Item></Link>
                                     </Menu.SubMenu>
-                                </Menu.SubMenu>
-                              </Menu.SubMenu>
-
-                            <Menu.SubMenu index="6" title={<span>基本分析工具</span>}>
-                              <Link to='/basicAnalyseTool/relationAnalyse'><Menu.Item index="5-1">相关性分析</Menu.Item></Link>
+                            </Menu.SubMenu>
                             </Menu.SubMenu>
 
-
+                            <Menu.SubMenu index="10" title={<span>基本分析工具</span>}>
+                              <Link to='/basicAnalyseTool/relationAnalyse'><Menu.Item index="5-1">相关性分析</Menu.Item></Link>
+                            </Menu.SubMenu>
                             <Menu.SubMenu index="11" title={<span>模型配置</span>}>
                                 <Menu.Item index="11-1">选项3</Menu.Item>
                             </Menu.SubMenu>
