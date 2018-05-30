@@ -23,6 +23,7 @@ import AnnualDataQuery from '@views/dataManage/indexDataManage/AnnualDataManage/
 import QuarterlyDataImport from '@views/dataManage/indexDataManage/QuarterlyDataManage/QuarterlyDataImport'
 import QuarterlyDataQuery from '@views/dataManage/indexDataManage/QuarterlyDataManage/QuarterlyDataQuery'
 import relationAnalyse from "./views/basicAnalyseTool/relationAnalyse";
+import basisParams from '@view/basicAbalyseTool/basisParams'
 ReactDOM.render((
     <Router history={hashHistory}>
         <Route path='/' components={App}>
@@ -56,6 +57,7 @@ ReactDOM.render((
             基本分析工具
            */
           <Route path='/basicAnalyseTool/relationAnalyse' component={relationAnalyse}/>
+          <Route path='/basicAnalyseTool/basisParams' component={basisParams}/>
 
 
         </Route>

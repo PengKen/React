@@ -53,7 +53,10 @@ class Menus extends Component{
                             </Menu.SubMenu>
 
                             <Menu.SubMenu index="10" title={<span>基本分析工具</span>}>
-                              <Link to='/basicAnalyseTool/relationAnalyse'><Menu.Item index="5-1">相关性分析</Menu.Item></Link>
+
+                              <Link to='/basicAnalyseTool/basisParams'><Menu.Item index="5-1">基本统计量</Menu.Item></Link>
+                              <Link to='/basicAnalyseTool/relationAnalyse'><Menu.Item index="5-2">相关性分析</Menu.Item></Link>
+
                             </Menu.SubMenu>
                             <Menu.SubMenu index="11" title={<span>模型配置</span>}>
                                 <Menu.Item index="11-1">选项3</Menu.Item>

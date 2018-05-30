@@ -9,26 +9,44 @@ import {PubSub} from "pubsub-js";
 class UserManage extends Component{
 
     getList(){
-        this.$post('/user/listForm')
-            .then(res=>{
-                console.log(res)
-                this.setState({
-                    data:res.userList,
-                    deptOption:res.deptOption,
-                    roleOption:res.roleOption
-                },()=>{
+        // this.$post('/user/listForm')
+        //     .then(res=>{
+        //         console.log(res)
+        //         this.setState({
+        //             data:res.userList,
+        //             deptOption:res.deptOption,
+        //             roleOption:res.roleOption
+        //         },()=>{
+        //             this.handleOption()
+        //         })
+        //     }).catch(e=>{
+        //     console.log(e)
+        // })
+      this.setState({
+                    // data:res.userList,
+                    // deptOption:res.deptOption,
+                roleOption: [
+                  {
+                    "id": 1,
+                    "name": "系统管理员",
+                    "description": "管理整个系统的用户、部门等基本元素"
+                  },
+                  {
+                    "id": 2,
+                    "name": "数据管理员",
+                    "description": "管理系统的指标及数据"
+                  }]
+
+      },()=>{
                     this.handleOption()
                 })
-            }).catch(e=>{
-            console.log(e)
-        })
     }
     handleOption(){
 
         const {deptOption,roleOption,dialogForm1 } = this.state
-             this.state.dialogForm1[3] = Object.assign({},this.state.dialogForm1[3],{options:deptOption})
-             this.state.dialogForm1[4] = Object.assign({},this.state.dialogForm1[4],{options:roleOption})
-            this.forceUpdate()
+             // this.state.dialogForm1[3] = Object.assign({},this.state.dialogForm1[3],{options:deptOption})
+             this.state.dialogForm1[4].options = roleOption
+             this.forceUpdate()
             //console.log(this.state)
     }
     componentDidMount(){
